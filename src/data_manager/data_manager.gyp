@@ -43,6 +43,11 @@
       'dependencies': [
         'oss/oss_data_manager_base.gyp:oss_user_pos_manager',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['use_packed_dictionary==1', {
           'dependencies': [
@@ -64,6 +69,11 @@
       'dependencies': [
         '../base/base.gyp:base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
   ],
 }

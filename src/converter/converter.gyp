@@ -54,6 +54,11 @@
         'converter_base.gyp:immutable_converter_interface',
         'converter_base.gyp:segments',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
   ],
 }

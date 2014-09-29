@@ -69,6 +69,11 @@
         '<(mozc_dir)/dictionary/dictionary_base.gyp:pos_matcher',
         'gen_<(dataset_tag)_embedded_data#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['target_platform!="Android"', {
           'sources': [
@@ -96,6 +101,11 @@
         'gen_embedded_suggestion_filter_data_for_<(dataset_tag)#host',
         'gen_embedded_symbol_rewriter_data_for_<(dataset_tag)#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['target_platform!="Android"', {
           'dependencies': [
@@ -108,6 +118,11 @@
       'target_name': 'gen_dictionary_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['use_separate_dictionary==1',{
             'dependencies': [
@@ -126,6 +141,11 @@
       'target_name': 'gen_connection_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['use_separate_connection_data==1',{
             'dependencies': [
@@ -144,6 +164,11 @@
       'target_name': 'gen_embedded_pos_group_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_pos_group_data_for_<(dataset_tag)',
@@ -177,6 +202,11 @@
       'sources': [
         '<(mozc_dir)/build_tools/zlib_util.py',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_connection_single_column_txt_for_<(dataset_tag)',
@@ -210,6 +240,11 @@
       'dependencies': [
         'gen_connection_single_column_txt_for_<(dataset_tag)#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_connection_data_for_<(dataset_tag)',
@@ -245,6 +280,11 @@
       'target_name': 'gen_embedded_dictionary_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['enable_two_pass_build==0', {
           'dependencies': [
@@ -310,6 +350,11 @@
       'dependencies': [
         'gen_connection_single_column_txt_for_<(dataset_tag)#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_separate_connection_data_for_<(dataset_tag)',
@@ -351,6 +396,11 @@
       'target_name': 'gen_separate_dictionary_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['enable_two_pass_build==0', {
           'dependencies': [
@@ -397,6 +447,11 @@
       'target_name': 'gen_<(dataset_tag)_segmenter_inl_header',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_<(dataset_tag)_segmenter_inl_header',
@@ -428,7 +483,7 @@
     },
     {
       'target_name': 'gen_<(dataset_tag)_segmenter_bitarray_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         '<(current_dir)/gen_<(dataset_tag)_segmenter_bitarray_main.cc',
@@ -445,6 +500,11 @@
       'dependencies': [
         'gen_<(dataset_tag)_segmenter_bitarray_main#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_segmenter_data_for_<(dataset_tag)',
@@ -470,6 +530,11 @@
       'target_name': 'gen_embedded_boundary_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_boundary_data_for_<(dataset_tag)',
@@ -502,6 +567,11 @@
       'target_name': 'gen_embedded_suffix_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_suffix_data_for_<(dataset_tag)',
@@ -532,6 +602,11 @@
       'target_name': 'gen_embedded_reading_correction_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_reading_correction_data',
@@ -560,6 +635,11 @@
       'target_name': 'gen_separate_collocation_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'dependencies': [
         '../../rewriter/rewriter_base.gyp:gen_collocation_data_main#host',
       ],
@@ -594,6 +674,11 @@
       'target_name': 'gen_embedded_collocation_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'dependencies': [
         '../../rewriter/rewriter_base.gyp:gen_collocation_data_main#host',
       ],
@@ -631,6 +716,11 @@
       'dependencies': [
         '../../rewriter/rewriter_base.gyp:gen_collocation_suppression_data_main#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_collocation_suppression_data',
@@ -665,6 +755,11 @@
       'dependencies': [
         '../../prediction/prediction_base.gyp:gen_suggestion_filter_main#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_suggestion_filter_data',
@@ -699,6 +794,11 @@
       'dependencies': [
         '../../rewriter/rewriter_base.gyp:gen_symbol_rewriter_dictionary_main#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_symbol_rewriter_data_for_<(dataset_tag)',
@@ -741,6 +841,11 @@
       'target_name': 'gen_embedded_counter_suffix_data_for_<(dataset_tag)',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_counter_suffix_data_for_<(dataset_tag)',

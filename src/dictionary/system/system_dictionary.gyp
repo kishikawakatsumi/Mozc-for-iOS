@@ -39,6 +39,11 @@
       'dependencies': [
         '../../base/base.gyp:base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'system_dictionary',
@@ -54,6 +59,11 @@
         '../file/dictionary_file.gyp:dictionary_file',
         'system_dictionary_codec',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'value_dictionary',
@@ -68,6 +78,11 @@
         '../file/dictionary_file.gyp:dictionary_file',
         'system_dictionary_codec',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'system_dictionary_builder',
@@ -85,6 +100,11 @@
         '../file/dictionary_file.gyp:codec',
         'system_dictionary_codec',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       # TODO(noriyukit): Ideally, the copy rule of
@@ -100,7 +120,6 @@
           '../../data/dictionary_oss/dictionary00.txt',
         ],
       },
-      'includes': [ '../../gyp/install_testdata.gypi' ],
     },
   ],
 }

@@ -62,11 +62,21 @@
         'prediction_base.gyp:suggestion_filter',
         'prediction_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_zero_query_number_data',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_zero_query_number_data',
@@ -99,6 +109,11 @@
       'sources': [
         'user_history_predictor.proto',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'includes': [
         '../protobuf/genproto.gypi',
       ],
@@ -114,6 +129,11 @@
         '../protobuf/protobuf.gyp:protobuf',
         'genproto_prediction#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'export_dependent_settings': [
         'genproto_prediction#host',
       ],

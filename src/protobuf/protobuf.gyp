@@ -122,6 +122,11 @@
       'target_name': 'protobuf',
       'type': 'static_library',
       'toolsets': ['host', 'target'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'all_dependent_settings': {
         'include_dirs': [
           '<(proto_out_dir)',  # make generated files (*.pb.h) visible.
@@ -200,7 +205,7 @@
     },
     {
       'target_name': 'protoc',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'dependencies': [
         'protobuf',
@@ -244,22 +249,6 @@
       'variables': {
         'bin_name': 'protoc',
       },
-      'conditions': [
-        # use system-installed protoc on Linux
-        ['OS!="linux"', {
-          'includes' : [
-            '../gyp/install_build_tool.gypi',
-          ],
-        }, {  # OS=="linux"
-          'conditions': [
-            ['use_libprotobuf==0', {
-              'includes' : [
-                '../gyp/install_build_tool.gypi',
-              ],
-            }],
-          ],
-        }],
-      ],
     },
   ],
   'conditions': [

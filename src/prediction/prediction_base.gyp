@@ -43,10 +43,15 @@
         '../base/base.gyp:base',
         '../storage/storage.gyp:storage',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_suggestion_filter_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'gen_suggestion_filter_main.cc',

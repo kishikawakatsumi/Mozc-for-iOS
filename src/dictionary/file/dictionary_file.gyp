@@ -39,6 +39,11 @@
       'dependencies': [
         '../../base/base.gyp:base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'dictionary_file',
@@ -51,6 +56,11 @@
         'codec',
         '../../base/base.gyp:base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'dictionary_file_builder',
@@ -63,6 +73,11 @@
         'codec',
         '../../base/base.gyp:base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
   ],
 }

@@ -59,6 +59,11 @@
         '../rewriter/rewriter.gyp:rewriter',
         '../session/session_base.gyp:session_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'mock_converter_engine',
@@ -71,18 +76,17 @@
         '../base/base.gyp:base',
         '../converter/converter_base.gyp:converter_mock'
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {  # An engine just for converter/converter_main.cc.
       'target_name': 'chromeos_engine_factory',
-      'type': 'static_library',
+      'type': 'none',
       'sources': [
         'chromeos_engine_factory.cc',
-      ],
-      'dependencies': [
-        '../base/base.gyp:base',
-        '../data_manager/chromeos/chromeos_data_manager.gyp:mozcdata',
-        '../prediction/prediction.gyp:prediction',
-        'engine',
       ],
     },
     {
@@ -97,6 +101,11 @@
         '../prediction/prediction.gyp:prediction',
         'engine',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'packed_engine_factory',
@@ -110,6 +119,11 @@
         '../prediction/prediction.gyp:prediction',
         'engine',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'mock_data_engine_factory',
@@ -124,6 +138,11 @@
         '../session/session_base.gyp:session_protocol',
         'engine',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'engine_factory',
@@ -134,6 +153,11 @@
       'dependencies': [
         'oss_engine_factory',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['use_packed_dictionary==1', {
           'dependencies': [

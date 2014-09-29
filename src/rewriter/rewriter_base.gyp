@@ -42,6 +42,11 @@
       'dependencies': [
         '../dictionary/dictionary_base.gyp:pos_util',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'toolsets': ['host'],
       'actions': [
         {
@@ -154,10 +159,15 @@
         '../storage/storage.gyp:storage#host',
         '../base/base.gyp:codegen_bytearray_stream#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_collocation_data_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'gen_collocation_data_main.cc',
@@ -168,7 +178,7 @@
     },
     {
       'target_name': 'gen_collocation_suppression_data_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'gen_collocation_suppression_data_main.cc',
@@ -179,7 +189,7 @@
     },
     {
       'target_name': 'gen_symbol_rewriter_dictionary_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'dictionary_generator.cc',
@@ -195,7 +205,7 @@
     },
     {
       'target_name': 'gen_usage_rewriter_dictionary_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'gen_usage_rewriter_dictionary_main.cc',

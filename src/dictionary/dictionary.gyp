@@ -45,6 +45,11 @@
         'system/system_dictionary.gyp:system_dictionary',
         'system/system_dictionary.gyp:value_dictionary',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'suffix_dictionary',
@@ -55,6 +60,11 @@
       'dependencies': [
         '../base/base.gyp:base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'dictionary_impl',
@@ -70,10 +80,15 @@
         'dictionary_base.gyp:pos_matcher',
         'dictionary_base.gyp:suppression_dictionary',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_system_dictionary_data_main',
-      'type': 'executable',
+      'type': 'none',
       'toolsets': ['host'],
       'sources': [
         'gen_system_dictionary_data_main.cc',
@@ -101,6 +116,11 @@
       'includes' : [
         '../gyp/install_build_tool.gypi'
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'dictionary_mock',
@@ -111,6 +131,11 @@
       'dependencies': [
         '../base/base.gyp:base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'dictionary_test_util',
@@ -122,6 +147,11 @@
         '../base/base.gyp:base',
         '../testing/testing.gyp:testing',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
   ],
 }

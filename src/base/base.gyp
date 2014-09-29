@@ -56,6 +56,11 @@
       'dependencies': [
         'base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['OS=="mac"', {
           'sources': [
@@ -135,6 +140,11 @@
         'gen_character_set#host',
         'gen_version_def#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['OS=="win"', {
           'link_settings': {
@@ -178,6 +188,11 @@
       'target_name': 'gen_character_set',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_character_set',
@@ -219,6 +234,11 @@
       'dependencies': [
         'base_core#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'obfuscator_support',
@@ -231,6 +251,11 @@
       'dependencies': [
         'base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'encryptor',
@@ -244,6 +269,11 @@
         'base',
         'obfuscator_support',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['OS=="win"', {
           'link_settings': {
@@ -262,6 +292,11 @@
       'target_name': 'gen_version_def',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_version_def',
@@ -293,11 +328,21 @@
       'dependencies': [
         'gen_config_file_stream_data#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_config_file_stream_data',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_config_file_stream_data',
@@ -348,6 +393,11 @@
       'dependencies': [
         'base_core',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'crash_report_handler',
@@ -358,6 +408,11 @@
       'dependencies': [
         'base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['OS=="win" and branding=="GoogleJapaneseInput"', {
           'dependencies': [
@@ -447,20 +502,6 @@
               ],
               'destination': '<(PRODUCT_DIR)/data',
             },
-          ],
-        },
-      ]},
-    ],
-    ['OS=="mac"', {
-      'targets': [
-        {
-          'target_name': 'mac_util_main',
-          'type': 'executable',
-          'sources': [
-            'mac_util_main.cc',
-          ],
-          'dependencies': [
-            'base',
           ],
         },
       ]},

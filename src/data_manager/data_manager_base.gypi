@@ -43,6 +43,11 @@
         'gen_embedded_pos_matcher_data_for_<(dataset_tag)#host',
         'gen_embedded_user_pos_data_for_<(dataset_tag)#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_<(dataset_tag)_embedded_data_light',
@@ -52,6 +57,11 @@
         'gen_embedded_pos_matcher_data_for_<(dataset_tag)#host',
         'gen_embedded_user_pos_data_for_<(dataset_tag)#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'gen_embedded_user_pos_data_for_<(dataset_tag)',
@@ -60,6 +70,11 @@
       'dependencies': [
         '<(mozc_dir)/dictionary/dictionary_base.gyp:pos_util',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_user_pos_data_for_<(dataset_tag)',
@@ -99,6 +114,11 @@
       'dependencies': [
         '<(mozc_dir)/dictionary/dictionary_base.gyp:pos_util',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_embedded_pos_matcher_data_for_<(dataset_tag)',

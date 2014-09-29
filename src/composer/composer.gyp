@@ -63,10 +63,15 @@
         '../session/session_base.gyp:session_protocol',
         '../transliteration/transliteration.gyp:transliteration',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'composer_test',
-      'type': 'executable',
+      'type': 'none',
       'sources': [
         'composer_test.cc',
         'internal/char_chunk_test.cc',
@@ -78,14 +83,6 @@
         'internal/typing_corrector_test.cc',
         'table_test.cc',
       ],
-      'dependencies': [
-        '../config/config.gyp:config_handler',
-        '../config/config.gyp:config_protocol',
-        '../session/session_base.gyp:request_test_util',
-        '../session/session_base.gyp:session_protocol',
-        '../testing/testing.gyp:gtest_main',
-        'composer',
-      ],
       'variables': {
         'test_size': 'small',
       },
@@ -94,14 +91,16 @@
     {
       'target_name': 'composer_all_test',
       'type': 'none',
-      'dependencies': [
-        'composer_test',
-      ],
     },
     {
       'target_name': 'gen_typing_model',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_qwerty_mobile-hiragana_typing_model',

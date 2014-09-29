@@ -44,6 +44,11 @@
         '../base/base.gyp:config_file_stream',
         'config_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'genproto_config',
@@ -55,6 +60,11 @@
       'includes': [
         '../protobuf/genproto.gypi',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'config_protocol',
@@ -70,6 +80,11 @@
       'export_dependent_settings': [
         'genproto_config#host',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'stats_config_util',
@@ -80,6 +95,11 @@
       'dependencies': [
         'config_handler',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['(target_platform=="Android") or '
          '(target_platform=="NaCl" and _toolset=="target")', {
@@ -104,7 +124,12 @@
         # storage.gyp:storage is depended by character_form_manager.
         # TODO(komatsu): delete this line.
         '../storage/storage.gyp:storage',
-      ]
+      ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
   ],
 }

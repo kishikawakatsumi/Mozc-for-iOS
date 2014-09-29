@@ -41,6 +41,11 @@
       'dependencies': [
         '../../base/base.gyp:base',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'msvs_disabled_warnings': [
         # switch statement contains 'default' but no 'case' labels
         # http://msdn.microsoft.com/en-us/library/te26h1tz.aspx
@@ -62,6 +67,11 @@
         '../../base/base.gyp:base',
         'calculator',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'install_calculator_test_data',
@@ -72,18 +82,12 @@
         ],
         'test_data_subdir': 'data/test/calculator',
       },
-      'includes': [ '../../gyp/install_testdata.gypi' ],
     },
     {
       'target_name': 'calculator_test',
-      'type': 'executable',
+      'type': 'none',
       'sources': [
         'calculator_test.cc',
-      ],
-      'dependencies': [
-        '../../testing/testing.gyp:gtest_main',
-        'calculator',
-        'install_calculator_test_data',
       ],
       'variables': {
         'test_size': 'small',

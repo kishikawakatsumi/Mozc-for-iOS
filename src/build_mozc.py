@@ -118,7 +118,7 @@ def GetBuildShortBaseName(options, target_platform):
     else:
       build_base = 'out_win_msvs'
   elif target_platform == 'Mac':
-    build_base = 'out_mac'
+    build_base = 'out_ios'
   elif target_platform == 'Linux':
     build_base = 'out_linux'
   elif target_platform == 'Android':

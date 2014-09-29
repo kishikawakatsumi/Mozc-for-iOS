@@ -54,6 +54,11 @@
         'session_base.gyp:session_usage_stats_util',
         'session_internal',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'session_internal',
@@ -72,6 +77,11 @@
         '../config/config.gyp:config_protocol',
         'session_base.gyp:session_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'session_handler',
@@ -93,6 +103,11 @@
         'session_base.gyp:generic_storage_manager',
         'session_base.gyp:session_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'conditions': [
         ['(target_platform=="NaCl" and _toolset=="target") or target_platform=="Android"', {
           'sources!': [
@@ -118,6 +133,11 @@
         '../usage_stats/usage_stats_base.gyp:usage_stats_protocol',
         'session_base.gyp:session_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'session_server',
@@ -135,6 +155,11 @@
         'session_handler',
         'session_usage_observer',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'random_keyevents_generator',
@@ -149,10 +174,15 @@
         'session',
         'session_base.gyp:session_protocol',
       ],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
     },
     {
       'target_name': 'session_server_main',
-      'type': 'executable',
+      'type': 'none',
       'sources': [
         'session_server_main.cc',
       ],
@@ -164,6 +194,11 @@
       'target_name': 'gen_session_stress_test_data',
       'type': 'none',
       'toolsets': ['host'],
+      'xcode_settings' : {
+        'SDKROOT': 'iphoneos',
+        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
+      },
       'actions': [
         {
           'action_name': 'gen_session_stress_test_data',
