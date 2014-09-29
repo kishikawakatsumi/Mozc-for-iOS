@@ -1,0 +1,176 @@
+1		あ	NoTransliteration
+あ*		ぁ
+ぁ*		あ
+あ`		ぁ
+_		い	NoTransliteration
+い*		ぃ
+ぃ*		い
+い`		ぃ
+;		う	NoTransliteration
+う*		ぅ
+ぅ*		ゔ
+ゔ*		う
+う`		ぅ
+ゔ`		ぅ
+う[		ゔ
+ぅ[		ゔ
+:		え	NoTransliteration
+え*		ぇ
+ぇ*		え
+え`		ぇ
+@		お	NoTransliteration
+お*		ぉ
+ぉ*		お
+お`		ぉ
+2		か	NoTransliteration
+か*		が
+が*		か
+か[		が
+a		き	NoTransliteration
+き*		ぎ
+ぎ*		き
+き[		ぎ
+b		く	NoTransliteration
+く*		ぐ
+ぐ*		く
+く[		ぐ
+c		け	NoTransliteration
+け*		げ
+げ*		け
+け[		げ
+|		こ	NoTransliteration
+こ*		ご
+ご*		こ
+こ[		ご
+3		さ	NoTransliteration
+さ*		ざ
+ざ*		さ
+さ[		ざ
+d		し	NoTransliteration
+し*		じ
+じ*		し
+し[		じ
+e		す	NoTransliteration
+す*		ず
+ず*		す
+す[		ず
+f		せ	NoTransliteration
+せ*		ぜ
+ぜ*		せ
+せ[		ぜ
+~		そ	NoTransliteration
+そ*		ぞ
+ぞ*		そ
+そ[		ぞ
+4		た	NoTransliteration
+た*		だ
+だ*		た
+た[		だ
+g		ち	NoTransliteration
+ち*		ぢ
+ぢ*		ち
+ち[		ぢ
+h		つ	NoTransliteration
+つ*		っ
+っ*		づ
+づ*		つ
+つ`		っ
+づ`		っ
+つ[		づ
+っ[		づ
+i		て	NoTransliteration
+て*		で
+で*		て
+て[		で
+$		と	NoTransliteration
+と*		ど
+ど*		と
+と[		ど
+5		な	NoTransliteration
+j		に	NoTransliteration
+k		ぬ	NoTransliteration
+l		ね	NoTransliteration
+%		の	NoTransliteration
+6		は	NoTransliteration
+は*		ば
+ば*		ぱ
+ぱ*		は
+は[		ば
+ぱ[		ば
+は]		ぱ
+ば]		ぱ
+m		ひ	NoTransliteration
+ひ*		び
+び*		ぴ
+ぴ*		ひ
+ひ[		び
+ぴ[		び
+ひ]		ぴ
+び]		ぴ
+n		ふ	NoTransliteration
+ふ*		ぶ
+ぶ*		ぷ
+ぷ*		ふ
+ふ[		ぶ
+ぷ[		ぶ
+ふ]		ぷ
+ぶ]		ぷ
+o		へ	NoTransliteration
+へ*		べ
+べ*		ぺ
+ぺ*		へ
+へ[		べ
+ぺ[		べ
+へ]		ぺ
+べ]		ぺ
+&		ほ	NoTransliteration
+ほ*		ぼ
+ぼ*		ぽ
+ぽ*		ほ
+ほ[		ぼ
+ぽ[		ぼ
+ほ]		ぽ
+ぼ]		ぽ
+7		ま	NoTransliteration
+p		み	NoTransliteration
+q		む	NoTransliteration
+r		め	NoTransliteration
+s		も	NoTransliteration
+8		や	NoTransliteration
+や*		ゃ
+ゃ*		や
+や`		ゃ
+u		ゆ	NoTransliteration
+ゆ*		ゅ
+ゅ*		ゆ
+ゆ`		ゅ
+^		よ	NoTransliteration
+よ*		ょ
+ょ*		よ
+よ`		ょ
+t		(	NoTransliteration
+v		)	NoTransliteration
+9		ら	NoTransliteration
+w		り	NoTransliteration
+x		る	NoTransliteration
+y		れ	NoTransliteration
+z		ろ	NoTransliteration
+*			NoTransliteration
+[			NoTransliteration
+]			NoTransliteration
+`			NoTransliteration
+'		’	NoTransliteration
+0		わ	NoTransliteration
+わ*		ゎ
+ゎ*		わ
+わ`		ゎ
++		を	NoTransliteration
+/		ん	NoTransliteration
+-		ー	NoTransliteration
+#		、	NoTransliteration
+,		。	NoTransliteration
+?		？	NoTransliteration
+!		！	NoTransliteration
+<		〜	NoTransliteration
+>		…	NoTransliteration
+{<}		

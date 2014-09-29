@@ -1,0 +1,102 @@
+# Generate POSMatcher rules:
+#
+# format:
+# FunctionName1 RegexPattern1
+# FunctionName2 RegexPattern2
+# FunctionName3 RegexPattern3
+# ..
+#
+# Generates the following methods inside POSMatcher
+# uint16 POSMatcher::Get<FunctionalName>Id() { ... }
+# bool   POSMatcher::Is<FunctionalName>(uint16 id) { ... }
+#
+# Example:
+# uint16 POSMatcher::GetFirstNameId() { ... }
+# bool   POSMatcher::IsFirstName(uint16 id) { ... }
+
+Functional ^(助詞|助動詞|動詞,非自立|名詞,非自立|形容詞,非自立|動詞,接尾|名詞,接尾|形容詞,接尾)
+
+Unknown    名詞,サ変接続
+
+FirstName  名詞,固有名詞,人名,名
+LastName   名詞,固有名詞,人名,姓
+
+Number      名詞,数,アラビア数字
+KanjiNumber 名詞,数,漢数字
+
+# used in CandidateFilter
+WeakCompoundPrefix ^(接頭詞,名詞接続|接頭詞,丁寧連用形接続|フィラー)
+
+# use in Segmenter
+# if the following particles exist at the beggining of a segment,
+# concat them with the next content word.
+# ex.
+# にかく => に書く, not に|書く
+AcceptableParticleAtBeginOfSegment ^助詞,*,*,*,*,*,(が|で|と|に|にて|の|へ|より|も|と|から|は|や)$
+
+# used in UserHistoryRewriter
+JapanesePunctuations 記号,(句点|読点)
+
+# used in SymbolRewriter
+OpenBracket 記号,括弧開
+CloseBracket 記号,括弧閉
+
+# used in SingleKanjiRewriter
+GeneralSymbol 記号,一般,
+
+# zipcode
+Zipcode 特殊,郵便番号
+
+# 短縮よみ
+IsolatedWord 特殊,短縮よみ
+
+# サジェストのみ
+SuggestOnlyWord 特殊,サジェストのみ
+
+# Used in UsageRewriter
+ContentWordWithConjugation ^(動詞,自立,*,*,五段|動詞,自立,*,*,一段|形容詞,自立)
+
+# 末尾語
+SuffixWord ^(助詞|助動詞|動詞,非自立|動詞,接尾|形容詞,非自立|形容詞,接尾|動詞,自立,*,*,サ変・スル)
+
+# 助数詞
+CounterSuffixWord 名詞,接尾,助数詞
+
+# 固有名詞
+UniqueNoun ^名詞,固有名詞
+
+# 一般名詞
+GeneralNoun ^名詞,一般,*,*,*,*,*$
+
+# Content Noun
+ContentNoun ^名詞,(一般|固有名詞|副詞可能|サ変接続),
+
+# Noun prefix
+NounPrefix ^接頭詞,名詞接続,
+
+# EOS symbols
+EOSSymbol ^(記号,(句点|読点|アルファベット|一般|括弧開|括弧閉))|^(名詞,数,(アラビア数字|区切り文字))
+
+# 副詞
+Adverb ^副詞,
+
+# 副詞節 suffix
+AdverbSegmentSuffix ^助詞,*,*,*,*,*,(から|で|と|に|にて|の|へ|を)$
+
+# 並立助詞
+ParallelMarker ^助詞,並立助詞
+
+# ます助動詞
+MasuSuffix 助動詞,*,*,*,特殊・(マス|タイ)
+
+# て助動詞/助詞
+TeSuffix (助詞,接続助詞,*,*,*,*,て|助動詞,*,*,*,特殊・タ,|動詞,非自立,*,*,一段,*,てる|動詞,非自立,*,*,五段・ワ行促音便,*,ちゃう)
+
+# カ行音便 タ接続 "書い"-て "書い"-た
+# This rule is used for removing candidate "書います/書いたい"
+KagyoTaConnectionVerb ^動詞,(非自立|自立),*,*,五段・カ行(促音便|イ音便),連用タ接続
+
+# ワ行促音便 連用形 "買っ" -て "買っ"-た
+# This rule is used for removing candidate "買いた"
+# Do not match ウ音便, because "吸うた" is acceptable.
+WagyoRenyoConnectionVerb ^動詞,(非自立|自立),*,*,五段・ワ行促音便,連用形
