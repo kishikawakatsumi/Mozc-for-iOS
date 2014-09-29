@@ -31,7 +31,7 @@
 
 #import "base/crash_report_handler.h"
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #if defined(GOOGLE_JAPANESE_INPUT_BUILD)
 #import <GoogleBreakpad/GoogleBreakpad.h>
 #endif  // GOOGLE_JAPANESE_INPUT_BUILD

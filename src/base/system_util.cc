@@ -1264,7 +1264,7 @@ int SystemUtil::MaybeMLock(const void *addr, size_t len) {
   return -1;
 #else  // defined(OS_WIN) || defined(OS_ANDROID) ||
        // defined(__native_client__)
-  return mlock(addr, len);
+  return -1;
 #endif  // defined(OS_WIN) || defined(OS_ANDROID) ||
         // defined(__native_client__)
 }

@@ -68,8 +68,7 @@
 // in Mac Framework/dynamic libraries.  Instead call _NSGetEnviron().
 // See the "PROGRAMMING" section of http://goo.gl/4Hq0D for the
 // detailed information.
-#include <crt_externs.h>
-static char **environ = *_NSGetEnviron();
+extern char **environ;
 #elif !defined(OS_WIN)
 // Defined somewhere in libc. We can't pass NULL as the 6th argument of
 // posix_spawn() since Qt applications use (at least) DISPLAY and QT_IM_MODULE
