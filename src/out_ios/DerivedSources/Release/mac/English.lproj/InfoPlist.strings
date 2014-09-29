@@ -1,0 +1,9 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Mozc";
+NSHumanReadableCopyright = "© 2014 Google Inc.";
+com.apple.inputmethod.Japanese = "Hiragana (Mozc)";
+com.apple.inputmethod.Japanese.Katakana = "Katakana (Mozc)";
+com.apple.inputmethod.Japanese.HalfWidthKana = "Half-width Katakana (Mozc)";
+com.apple.inputmethod.Japanese.FullWidthRoman = "Full-width Alphanumeric (Mozc)";
+com.apple.inputmethod.Roman = "Alphanumeric (Mozc)";
