@@ -31,3 +31,8 @@ See `src/out_ios/Release-iphoneos`
 ### Limitation
 
 Device build only, cannot run on the simulator.
+
+
+### Sample Project
+
+See https://github.com/kishikawakatsumi/JapaneseKeyboardKit
