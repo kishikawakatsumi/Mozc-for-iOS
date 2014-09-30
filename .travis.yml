@@ -1,0 +1,6 @@
+language: objective-c
+script:
+  - cd src/
+  - python build_mozc.py gyp
+  - python build_mozc_ios.py
+  
