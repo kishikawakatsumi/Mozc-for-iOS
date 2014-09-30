@@ -3,6 +3,15 @@ Mozc-for-iOS
 
 Mozc for iOS build
 
+### Credits
+
+https://code.google.com/p/mozc/
+
+### References
+
+https://code.google.com/p/mozc/
+
+
 ### Get the Code
 
 ```
