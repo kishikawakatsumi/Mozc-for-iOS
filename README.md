@@ -60,4 +60,4 @@ See https://github.com/kishikawakatsumi/JapaneseKeyboardKit
 
 ## License
 
-Mozc for iOS build is available under the [Apache license][Apache] (same as the original). See the LICENSE file for more info.
+Mozc-for-iOS is available under the [Apache license][Apache] (same as the original). See the LICENSE file for more info.
