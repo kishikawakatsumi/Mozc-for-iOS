@@ -1,4 +1,4 @@
-Mozc-for-iOS [![Build Status](https://img.shields.io/travis/kishikawakatsumi/Mozc-for-iOS/master.svg?style=flat)](https://travis-ci.org/kishikawakatsumi/Mozc-for-iOS)
+Mozc-for-iOS [![Build Status](http://img.shields.io/travis/kishikawakatsumi/Mozc-for-iOS/master.svg?style=flat)](https://travis-ci.org/kishikawakatsumi/Mozc-for-iOS)
 ============
 
 Mozc for iOS build
