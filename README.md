@@ -1,4 +1,4 @@
-Mozc-for-iOS [![Build Status](http://img.shields.io/travis/kishikawakatsumi/Mozc-for-iOS/master.svg?style=flat)](https://travis-ci.org/kishikawakatsumi/Mozc-for-iOS)
+Mozc-for-iOS [![Build Status](https://img.shields.io/travis/kishikawakatsumi/Mozc-for-iOS/master.svg?style=flat)](https://travis-ci.org/kishikawakatsumi/Mozc-for-iOS) [![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-yellow.svg?style=flat)](https://www.tldrlegal.com/l/apache2)
 ============
 
 Mozc for iOS build
