@@ -49,7 +49,7 @@
       ],
       'xcode_settings' : {
         'SDKROOT': 'iphoneos',
-        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
         'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
       },
     },
@@ -59,7 +59,7 @@
       'toolsets': ['host'],
       'xcode_settings' : {
         'SDKROOT': 'iphoneos',
-        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
         'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
       },
       'actions': [
@@ -99,7 +99,7 @@
       ],
       'xcode_settings' : {
         'SDKROOT': 'iphoneos',
-        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
         'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
       },
       'export_dependent_settings': [
@@ -115,7 +115,7 @@
       ],
       'xcode_settings' : {
         'SDKROOT': 'iphoneos',
-        'IPHONEOS_DEPLOYMENT_TARGET': '8.0',
+        'IPHONEOS_DEPLOYMENT_TARGET': '7.0',
         'ARCHS': '$(ARCHS_UNIVERSAL_IPHONE_OS)',
       },
       'includes': [
