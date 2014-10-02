@@ -31,13 +31,17 @@
 
 #include "base/logging.h"
 
+#include <cstring>
+
 namespace mozc {
 namespace storage {
 namespace louds {
 
 namespace {
 inline int ReadInt32(const uint8 *data) {
-  return *reinterpret_cast<const int32*>(data);
+  int32 ret;
+  std::memcpy(&ret, data, sizeof(ret));
+  return ret;
 }
 }  // namespace
 
