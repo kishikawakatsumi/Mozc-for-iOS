@@ -16,6 +16,7 @@ https://code.google.com/p/mozc/
     Mac OS X 10.9+
     Xcode 6.0+
     iOS SDK 8.0+
+    Python 2.7.5
 
 
 ### Get the Code
