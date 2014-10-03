@@ -17,6 +17,11 @@ https://code.google.com/p/mozc/
     Xcode 6.0+
     iOS SDK 8.0+
     Python 2.7.5
+    
+### Tested Environments
+    iPhone 6 Plus, iOS 8.0.2
+    iPhone 4S, iOS 8.0.2
+    iPad mini, iOS 7.1.2
 
 
 ### Get the Code
